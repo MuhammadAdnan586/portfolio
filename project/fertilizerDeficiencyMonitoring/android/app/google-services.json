@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "696209683600",
+    "project_id": "com.fertilizerdeficiencymonitoring",
+    "storage_bucket": "com.fertilizerdeficiencymonitoring.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:696209683600:android:83e792608c79d2511c5415",
+        "android_client_info": {
+          "package_name": "com.fertilizerdeficiencymonitoring"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDuriGWDEHyV5mfZ21Tma7zAWdoMeVZrsQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
