@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Github, ExternalLink, ChevronRight } from 'lucide-react';
+import Image from 'next/image';
 import Link from 'next/link';
 import { useInView } from 'react-intersection-observer';
 
@@ -15,6 +16,7 @@ interface Project {
   tech: string[];
   github?: string;
   demo?: string;
+  image?: string;
 }
 
 const projects: Project[] = [
@@ -61,7 +63,8 @@ const projects: Project[] = [
     description: 'Interactive sales analytics dashboard with KPI tracking and trend analysis.',
     accuracy: 'N/A',
     tech: ['Power BI', 'DAX', 'SQL'],
-    demo: '#',
+    github: 'https://github.com/MuhammadAdnan586/Sale_Dashboard',
+    image: '/images/sales-dashboard.png',
   },
   {
     id: 6,
@@ -97,7 +100,8 @@ const projects: Project[] = [
     description: 'HR analytics dashboard tracking employee attrition and performance metrics.',
     accuracy: 'N/A',
     tech: ['Power BI', 'DAX'],
-    demo: '#',
+    github: 'https://github.com/MuhammadAdnan586/HR-Analytics-Dashboard-',
+    image: '/images/hr-dashboard.png',
   },
   {
     id: 10,
@@ -106,7 +110,8 @@ const projects: Project[] = [
     description: 'Financial analytics dashboard with revenue and expense tracking.',
     accuracy: 'N/A',
     tech: ['Power BI', 'DAX'],
-    demo: '#',
+    github: 'https://github.com/MuhammadAdnan586/Financial-Analytics-Dashboard-',
+    image: '/images/financial-dashboard.png',
   },
 ];
 
@@ -181,6 +186,17 @@ export function Projects() {
                 transition={{ delay: index * 0.1 }}
                 whileHover={{ scale: 1.02, y: -5 }}
               >
+                {project.image && (
+                  <div className="relative w-full h-48">
+                    <Image
+                      src={project.image}
+                      alt={project.title}
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                )}
+
                 <div className="p-6 h-full flex flex-col">
                   {/* Header */}
                   <div className="mb-4">
@@ -224,6 +240,8 @@ export function Projects() {
                     {project.github && (
                       <motion.a
                         href={project.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="flex items-center gap-2 px-4 py-2 bg-white/10 hover:bg-white/20 rounded-lg transition-all flex-1 justify-center"
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
@@ -235,6 +253,8 @@ export function Projects() {
                     {project.demo && (
                       <motion.a
                         href={project.demo}
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="flex items-center gap-2 px-4 py-2 bg-white/10 hover:bg-white/20 rounded-lg transition-all flex-1 justify-center"
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
