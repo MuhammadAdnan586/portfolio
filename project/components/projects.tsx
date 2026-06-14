@@ -193,7 +193,7 @@ export function Projects() {
             {filteredProjects.map((project, index) => (
               <motion.div
                 key={project.id}
-                className="glass rounded-xl overflow-hidden hover:shadow-lg hover:shadow-primary/30 transition-all group cursor-default"
+                className="glass rounded-xl overflow-hidden hover:shadow-lg hover:shadow-primary/30 transition-all group cursor-default flex flex-col"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
@@ -210,7 +210,7 @@ export function Projects() {
                   </div>
                 )}
 
-                <div className="p-6 h-full flex flex-col">
+                <div className="p-6 flex flex-col flex-1">
                   {/* Header */}
                   <div className="mb-4">
                     <div className="inline-block px-3 py-1 rounded-full bg-white/10 text-xs font-semibold text-accent mb-3">
