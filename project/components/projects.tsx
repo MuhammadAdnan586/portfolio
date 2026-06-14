@@ -17,6 +17,7 @@ interface Project {
   github?: string;
   demo?: string;
   image?: string;
+  details: string;
 }
 
 const projects: Project[] = [
@@ -28,6 +29,7 @@ const projects: Project[] = [
     accuracy: '85%',
     tech: ['Python', 'Pandas', 'Scikit-Learn', 'Matplotlib'],
     github: '#',
+    details: 'Built a machine learning model using Random Forest algorithm to predict survival of Titanic passengers. Performed data cleaning, exploratory data analysis (EDA), feature engineering, and hyperparameter tuning to achieve 85% accuracy. Used Matplotlib and Seaborn for visualization.',
   },
   {
     id: 2,
@@ -37,6 +39,7 @@ const projects: Project[] = [
     accuracy: '89%',
     tech: ['Python', 'XGBoost', 'Scikit-Learn', 'Seaborn'],
     github: '#',
+    details: 'Developed a regression model to predict house prices using XGBoost and Random Forest. Applied extensive feature engineering including handling missing values, encoding categorical variables, and scaling. Achieved 89% accuracy with cross-validation.',
   },
   {
     id: 3,
@@ -46,6 +49,7 @@ const projects: Project[] = [
     accuracy: '91%',
     tech: ['Python', 'XGBoost', 'Pandas'],
     github: '#',
+    details: 'Created a classification model using XGBoost to predict customer churn for a telecom company. Analyzed key churn indicators and provided actionable business insights. Model achieved 91% accuracy with high precision and recall.',
   },
   {
     id: 4,
@@ -55,6 +59,7 @@ const projects: Project[] = [
     accuracy: '88%',
     tech: ['Python', 'Prophet', 'XGBoost'],
     github: '#',
+    details: 'Built a time series forecasting solution combining Facebook Prophet and XGBoost to predict future sales. Handled seasonality, trends, and holiday effects. Achieved 88% forecast accuracy on test data.',
   },
   {
     id: 5,
@@ -65,6 +70,7 @@ const projects: Project[] = [
     tech: ['Power BI', 'DAX', 'SQL'],
     github: 'https://github.com/MuhammadAdnan586/Sale_Dashboard',
     image: '/images/sales-dashboard.png',
+    details: 'Designed an interactive Power BI dashboard to track sales KPIs including Total Revenue (11M), Sum of Profit (3M), Profit Margin (29.59%), and Average Order Value (120.71K). Dashboard includes monthly revenue trends, regional breakdown, and product category analysis with dynamic filters.',
   },
   {
     id: 6,
@@ -74,6 +80,7 @@ const projects: Project[] = [
     accuracy: '94%',
     tech: ['TensorFlow', 'Keras', 'CNN'],
     github: '#',
+    details: 'Implemented a Convolutional Neural Network (CNN) with Transfer Learning using pre-trained models. Applied data augmentation and fine-tuning to achieve 94% accuracy on image classification. Used TensorFlow and Keras frameworks.',
   },
   {
     id: 7,
@@ -83,6 +90,7 @@ const projects: Project[] = [
     accuracy: 'N/A',
     tech: ['MySQL', 'SQL', 'Database Design'],
     github: '#',
+    details: 'Designed and implemented a complete Student Management System using MySQL. Includes tables for students, courses, grades, and attendance. Features advanced SQL queries, stored procedures, triggers, and CRUD operations with proper normalization.',
   },
   {
     id: 8,
@@ -92,6 +100,7 @@ const projects: Project[] = [
     accuracy: 'N/A',
     tech: ['MySQL', 'SQL', 'ER Diagrams'],
     github: '#',
+    details: 'Built a Hospital Management System database with entities for patients, doctors, appointments, and billing. Designed ER diagrams, implemented relationships, and wrote complex SQL queries for reporting and management operations.',
   },
   {
     id: 9,
@@ -102,6 +111,7 @@ const projects: Project[] = [
     tech: ['Power BI', 'DAX'],
     github: 'https://github.com/MuhammadAdnan586/HR-Analytics-Dashboard-',
     image: '/images/hr-dashboard.png',
+    details: 'Created a comprehensive HR Analytics Dashboard showing employee attrition rate (19.20%), total employees (1K), active employees (808), average age (40.32), satisfaction score (3.02), and average years (3.27). Includes department-wise attrition, gender distribution, salary analysis, and performance ratings with interactive filters.',
   },
   {
     id: 10,
@@ -112,10 +122,13 @@ const projects: Project[] = [
     tech: ['Power BI', 'DAX'],
     github: 'https://github.com/MuhammadAdnan586/Financial-Analytics-Dashboard-',
     image: '/images/financial-dashboard.png',
+    details: 'Built a Financial Analytics Dashboard tracking Total Revenue (28M), Total Expense (9M), Net Profit (20M), Budget Variance (1M), and Profit Margin (69.40%). Includes monthly revenue trends, expense breakdown by sub-category (Salaries vs Operations), department-wise expense analysis, and quarterly revenue vs expense comparison.',
   },
 ];
 
 const categories = ['All', 'Machine Learning', 'Deep Learning', 'Power BI', 'SQL'];
+
+export { projects };
 
 export function Projects() {
   const [activeCategory, setActiveCategory] = useState('All');
@@ -237,7 +250,7 @@ export function Projects() {
 
                   {/* Buttons */}
                   <div className="flex gap-3">
-                    {project.github && (
+                    {project.github && project.github !== '#' && (
                       <motion.a
                         href={project.github}
                         target="_blank"
@@ -247,31 +260,16 @@ export function Projects() {
                         whileTap={{ scale: 0.95 }}
                       >
                         <Github size={16} />
-                        <span className="text-sm">Code</span>
+                        <span className="text-sm">GitHub</span>
                       </motion.a>
                     )}
-                    {project.demo && (
-                      <motion.a
-                        href={project.demo}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center gap-2 px-4 py-2 bg-white/10 hover:bg-white/20 rounded-lg transition-all flex-1 justify-center"
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
-                      >
-                        <ExternalLink size={16} />
-                        <span className="text-sm">Demo</span>
-                      </motion.a>
-                    )}
-                    <motion.a
+                    <Link
                       href={`/projects/${project.id}`}
                       className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-blue-500 to-cyan-500 text-white rounded-lg transition-all flex-1 justify-center"
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
                     >
                       <span className="text-sm">Details</span>
                       <ChevronRight size={16} />
-                    </motion.a>
+                    </Link>
                   </div>
                 </div>
               </motion.div>
