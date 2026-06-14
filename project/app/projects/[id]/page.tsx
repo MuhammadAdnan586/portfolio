@@ -131,6 +131,33 @@ const projectsData: { [key: number]: any } = {
       ],
     },
   },
+  4: {
+    id: 4,
+    title: 'Sales Forecasting',
+    category: 'Machine Learning',
+    model: 'Prophet + XGBoost',
+    accuracy: '88%',
+    tech: ['Python', 'Prophet', 'XGBoost', 'Pandas'],
+    description: 'Time series forecasting using Prophet and XGBoost for accurate sales predictions.',
+    fullDescription: 'Built a time series forecasting solution combining Facebook Prophet and XGBoost to predict future sales. Handled seasonality, trends, and holiday effects. Achieved 88% forecast accuracy on test data.',
+    keyFeatures: [
+      'Time series decomposition',
+      'Seasonality and trend analysis',
+      'Facebook Prophet integration',
+      'XGBoost for residual modeling',
+      'Holiday effects handling',
+    ],
+    algorithms: ['Prophet', 'XGBoost'],
+    metrics: { 'Accuracy': 88, 'MAE': 12, 'RMSE': 15, 'MAPE': 8 },
+    charts: {
+      featureImportance: [
+        { name: 'Trend', value: 0.35 },
+        { name: 'Seasonality', value: 0.28 },
+        { name: 'Holiday', value: 0.20 },
+        { name: 'Others', value: 0.17 },
+      ],
+    },
+  },
   5: {
     id: 5,
     title: 'Power BI Sales Dashboard',
@@ -525,6 +552,9 @@ export default function ProjectDetail({ params }: { params: { id: string } }) {
                 whileHover={{ scale: 1.02 }}
               >
                 <h3 className="text-xl font-bold mb-6">Dashboard Preview</h3>
+                {project.id === 5 && <img src="/images/sales-dashboard.png" alt="Sales Dashboard" className="w-full rounded-lg mb-4 object-cover" />}
+                {project.id === 9 && <img src="/images/hr-dashboard.png" alt="HR Dashboard" className="w-full rounded-lg mb-4 object-cover" />}
+                {project.id === 10 && <img src="/images/financial-dashboard.png" alt="Financial Dashboard" className="w-full rounded-lg mb-4 object-cover" />}
                 <div className="w-full h-72 bg-gradient-to-br from-blue-500/10 to-cyan-500/10 rounded-lg border border-white/10 flex items-center justify-center overflow-hidden">
                   <svg viewBox="0 0 800 600" className="w-full h-full">
                     {/* Header Bar */}
@@ -790,7 +820,15 @@ export default function ProjectDetail({ params }: { params: { id: string } }) {
           <h3 className="text-2xl font-bold mb-6">Interested in this project?</h3>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <motion.a
-              href="https://github.com/MuhammadAdnan586/Kingsman"
+              href={
+  project.id === 5
+    ? 'https://github.com/MuhammadAdnan586/Sale_Dashboard'
+    : project.id === 9
+    ? 'https://github.com/MuhammadAdnan586/HR-Analytics-Dashboard-'
+    : project.id === 10
+    ? 'https://github.com/MuhammadAdnan586/Financial-Analytics-Dashboard-'
+    : 'https://github.com/MuhammadAdnan586'
+}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-8 py-3 bg-white/10 hover:bg-white/20 rounded-lg transition-all"
