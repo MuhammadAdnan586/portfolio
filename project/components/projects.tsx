@@ -238,8 +238,7 @@ export function Projects() {
 
                   {/* Buttons */}
                   <div className="flex gap-3 mt-auto">
-                    {project.github && project.github !== '#' && (
-                      <motion.a
+{project.github && project.github !== '#' && project.category !== 'Power BI' && (                      <motion.a
                         href={project.github}
                         target="_blank"
                         rel="noopener noreferrer"
