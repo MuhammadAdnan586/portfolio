@@ -3,7 +3,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Github, ExternalLink, ChevronRight } from 'lucide-react';
-import Image from 'next/image';
 import Link from 'next/link';
 import { useInView } from 'react-intersection-observer';
 
@@ -199,17 +198,6 @@ export function Projects() {
                 transition={{ delay: index * 0.1 }}
                 whileHover={{ scale: 1.02, y: -5 }}
               >
-                {project.image && (
-                  <div className="relative w-full h-48">
-                    <Image
-                      src={project.image}
-                      alt={project.title}
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-                )}
-
                 <div className="p-6 flex flex-col flex-1">
                   {/* Header */}
                   <div className="mb-4">
@@ -249,7 +237,7 @@ export function Projects() {
                   </div>
 
                   {/* Buttons */}
-                  <div className="flex gap-3">
+                  <div className="flex gap-3 mt-auto">
                     {project.github && project.github !== '#' && (
                       <motion.a
                         href={project.github}
