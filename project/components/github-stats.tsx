@@ -14,25 +14,25 @@ interface GitHubRepo {
 
 const mockRepos: GitHubRepo[] = [
   {
-    name: 'Fertilizer Detection AI',
-    description: 'AI-powered app for detecting fertilizer deficiencies in crops',
-    stars: 45,
-    forks: 12,
-    url: 'https://github.com/MuhammadAdnan586/Kingsman',
+    name: 'AI-Powered AutoML Platform',
+    description: 'Production-ready AutoML SaaS — automated ML pipeline with FastAPI, Next.js, SHAP explainability and a no-code API generator.',
+    stars: 0,
+    forks: 0,
+    url: 'https://github.com/MuhammadAdnan586/AI-Powered-AutoML',
   },
   {
-    name: 'ML Projects Suite',
-    description: 'Collection of machine learning projects with models and visualizations',
-    stars: 28,
-    forks: 8,
-    url: 'https://github.com/MuhammadAdnan586/Kingsman',
+    name: 'Customer Intelligence & Revenue Optimization',
+    description: 'SQL-driven customer analytics dashboard on the Olist dataset — RFM segmentation, cohort retention, product affinity and revenue leakage.',
+    stars: 0,
+    forks: 0,
+    url: 'https://github.com/MuhammadAdnan586/Customer-Intelligence-Revenue-Optimization',
   },
   {
-    name: 'Data Science Toolkit',
-    description: 'Python utilities for data preprocessing and analysis',
-    stars: 19,
-    forks: 5,
-    url: 'https://github.com/MuhammadAdnan586/Kingsman',
+    name: 'AI Interview Readiness Platform',
+    description: 'FastAPI-powered interview platform with CV parsing, dynamic question generation, voice analysis and automated scoring.',
+    stars: 0,
+    forks: 0,
+    url: 'https://github.com/MuhammadAdnan586/interview-platform',
   },
 ];
 
@@ -132,7 +132,7 @@ export function GitHubStats() {
           viewport={{ once: true }}
         >
           <motion.a
-            href="https://github.com/MuhammadAdnan586/Kingsman"
+            href="https://github.com/MuhammadAdnan586"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-8 py-3 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-lg hover:shadow-lg hover:shadow-blue-500/50 transition-all"

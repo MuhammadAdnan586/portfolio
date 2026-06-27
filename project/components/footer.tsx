@@ -77,7 +77,7 @@ export function Footer() {
                 <Linkedin size={20} />
               </motion.a>
               <motion.a
-                href="https://github.com/MuhammadAdnan586/Kingsman"
+                href="https://github.com/MuhammadAdnan586"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2 rounded-lg glass hover:bg-white/20 transition-all"

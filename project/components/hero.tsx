@@ -139,7 +139,7 @@ export function Hero() {
                 <Linkedin size={24} />
               </motion.a>
               <motion.a
-                href="https://github.com/MuhammadAdnan586/Kingsman"
+                href="https://github.com/MuhammadAdnan586"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 rounded-lg glass hover:bg-white/20 transition-all"

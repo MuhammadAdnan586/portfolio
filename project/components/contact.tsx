@@ -69,7 +69,7 @@ export function Contact() {
       icon: <Github className="w-6 h-6" />,
       label: 'GitHub',
       value: 'MuhammadAdnan586',
-      href: 'https://github.com/MuhammadAdnan586/Kingsman',
+      href: 'https://github.com/MuhammadAdnan586',
     },
   ];
 
