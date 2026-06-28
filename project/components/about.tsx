@@ -6,10 +6,10 @@ import { useInView } from 'react-intersection-observer';
 import { AnimatedCounter } from './animated-counter';
 
 const stats = [
-  { label: 'Projects Completed', value: 15, suffix: '+' },
+  { label: 'Projects Completed', value: 8, suffix: '+' },
   { label: 'Certifications', value: 1, suffix: '+' },
-  { label: 'Skills', value: 20, suffix: '+' },
-  { label: 'Technologies', value: 25, suffix: '+' },
+  { label: 'Skills', value: 35, suffix: '+' },
+  { label: 'Technologies', value: 20, suffix: '+' },
 ];
 
 const interests = [
@@ -71,11 +71,11 @@ export function About() {
             className="space-y-6"
           >
             <p className="text-lg text-foreground/80 leading-relaxed">
-              Fresh Computer Science graduate with strong foundations in Data Science, Machine Learning, Deep Learning, SQL, Power BI and Artificial Intelligence.
+              Computer Science graduate with hands-on experience in Data Science, Machine Learning, Deep Learning, SQL and Power BI.
             </p>
 
             <p className="text-lg text-foreground/80 leading-relaxed">
-              Passionate about building predictive models, intelligent applications and data-driven solutions. I combine technical expertise with creative problem-solving to deliver impactful results.
+              Currently working as a Data Scientist at <strong className="text-foreground">DevRolin</strong>, building end-to-end AI-powered SaaS platforms, predictive models and business intelligence dashboards using Python, FastAPI, Next.js, TensorFlow and Power BI. Passionate about solving real-world problems through data-driven solutions.
             </p>
 
             <p className="text-lg text-foreground/80 leading-relaxed">

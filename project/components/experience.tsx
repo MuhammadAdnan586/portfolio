@@ -18,12 +18,20 @@ interface TimelineItem {
 const timeline: TimelineItem[] = [
   {
     type: 'experience',
+    title: 'Data Scientist',
+    organization: 'DevRolin',
+    period: 'Apr 2026 - Present',
+    description:
+      'Working as a Data Scientist, contributing to data analysis, model development, and reporting workflows using Python, SQL, and machine learning tools. Collaborating with the team on data-driven solutions, applying statistical analysis and predictive modeling to support business decisions.',
+    icon: <Briefcase className="w-6 h-6" />,
+  },
+  {
+    type: 'experience',
     title: 'Business Associate',
     organization: "Scroll'n Ecom",
-    period: '2025 - 2026',
-    duration: '6 - 12 Months',
+    period: 'Jan 2025 - Apr 2026',
     description:
-      'Founded and managed an e-commerce startup, overseeing end-to-end business operations including product sourcing, online store management, digital marketing, and customer relations. Gained hands-on entrepreneurial experience in building and scaling an online business.',
+      'Founded and managed an e-commerce startup, overseeing end-to-end business operations including product sourcing, online store management, digital marketing, and customer relations. Gained hands-on entrepreneurial experience in building and scaling an online business, including data-driven decisions around pricing and marketing spend.',
     icon: <Briefcase className="w-6 h-6" />,
   },
   {

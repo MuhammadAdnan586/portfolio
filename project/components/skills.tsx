@@ -14,49 +14,63 @@ const skillsData: Skill[] = [
     category: 'Programming & Libraries',
     skills: [
       { name: 'Python', level: 95 },
-      { name: 'SQL', level: 90 },
-      { name: 'Pandas', level: 92 },
       { name: 'NumPy', level: 90 },
+      { name: 'Pandas', level: 92 },
+      { name: 'Matplotlib', level: 88 },
+      { name: 'Seaborn', level: 88 },
       { name: 'Scikit-Learn', level: 92 },
+    ],
+  },
+  {
+    category: 'Deep Learning Frameworks',
+    skills: [
+      { name: 'TensorFlow', level: 88 },
+      { name: 'Keras', level: 88 },
+      { name: 'OpenCV', level: 85 },
+      { name: 'CNN', level: 90 },
+      { name: 'Transfer Learning', level: 88 },
+      { name: 'NLP', level: 82 },
+      { name: 'SHAP', level: 85 },
+    ],
+  },
+  {
+    category: 'Web & SaaS Development',
+    skills: [
+      { name: 'FastAPI', level: 90 },
+      { name: 'Next.js', level: 90 },
+      { name: 'REST APIs', level: 90 },
+      { name: 'React Native', level: 80 },
+      { name: 'Django', level: 78 },
+      { name: 'Firebase', level: 82 },
+      { name: 'Docker', level: 85 },
+    ],
+  },
+  {
+    category: 'Database & BI',
+    skills: [
+      { name: 'MySQL', level: 92 },
+      { name: 'SQL', level: 90 },
+      { name: 'Power BI', level: 90 },
+      { name: 'DAX', level: 85 },
+      { name: 'Data Modeling', level: 85 },
     ],
   },
   {
     category: 'Machine Learning',
     skills: [
-      { name: 'Linear Regression', level: 92 },
-      { name: 'Logistic Regression', level: 90 },
-      { name: 'Decision Tree', level: 88 },
-      { name: 'Random Forest', level: 92 },
-      { name: 'XGBoost', level: 90 },
+      { name: 'Regression', level: 92 },
+      { name: 'Classification', level: 92 },
+      { name: 'Clustering', level: 85 },
+      { name: 'Ensemble Methods', level: 88 },
+      { name: 'AutoML', level: 88 },
+    ],
+  },
+  {
+    category: 'Core Competencies',
+    skills: [
       { name: 'Feature Engineering', level: 92 },
-    ],
-  },
-  {
-    category: 'Deep Learning',
-    skills: [
-      { name: 'TensorFlow', level: 88 },
-      { name: 'Keras', level: 88 },
-      { name: 'CNN', level: 90 },
-      { name: 'Transfer Learning', level: 88 },
-      { name: 'OpenCV', level: 85 },
-    ],
-  },
-  {
-    category: 'Data Visualization & BI',
-    skills: [
-      { name: 'Power BI', level: 90 },
-      { name: 'Matplotlib', level: 88 },
-      { name: 'Seaborn', level: 88 },
-      { name: 'Tableau', level: 82 },
-    ],
-  },
-  {
-    category: 'Database',
-    skills: [
-      { name: 'MySQL', level: 92 },
-      { name: 'SQL Server', level: 88 },
-      { name: 'Database Design', level: 90 },
-      { name: 'DAX', level: 85 },
+      { name: 'Model Evaluation & Tuning', level: 88 },
+      { name: 'Statistical Analysis', level: 85 },
     ],
   },
   {
