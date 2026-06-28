@@ -41,7 +41,7 @@ export default function ResumePage() {
             transition={{ delay: 0.2, duration: 0.6 }}
           >
             <iframe
-              src="/Muhammad_Adnan_(CV).pdf"
+              src="/Muhammad Adnan (CV).pdf"
               className="w-full h-screen min-h-96 rounded-lg"
               title="Muhammad Adnan CV"
             />
@@ -55,7 +55,7 @@ export default function ResumePage() {
             transition={{ delay: 0.3, duration: 0.6 }}
           >
             <motion.a
-              href="/Muhammad_Adnan_(CV).pdf"
+              href="/Muhammad Adnan (CV).pdf"
               download
               className="inline-flex items-center gap-2 px-8 py-3 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-lg hover:shadow-lg hover:shadow-blue-500/50 transition-all"
               whileHover={{ scale: 1.05 }}
