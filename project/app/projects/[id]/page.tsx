@@ -16,6 +16,7 @@ const projectsData: { [key: number]: any } = {
     accuracy: 'N/A',
     tech: ['MySQL', 'FastAPI', 'SQLAlchemy', 'Next.js', 'Recharts', 'Tailwind CSS'],
     github: 'https://github.com/MuhammadAdnan586/Customer-Intelligence-Revenue-Optimization',
+    images: ['/images/customer-intelligence-1.jpeg', '/images/customer-intelligence-2.jpeg', '/images/customer-intelligence-3.jpeg', '/images/customer-intelligence-4.jpeg', '/images/customer-intelligence-5.jpeg'],
     description: 'A full-stack SQL-driven analytics dashboard answering four real business questions live from a MySQL database, built on the Olist Brazilian e-commerce dataset.',
     fullDescription: 'A full-stack customer intelligence dashboard built on the Olist Brazilian e-commerce dataset (2016-2018), analyzing 96,096 unique customers and $15.42M in delivered revenue. Every number on the dashboard is computed live — a FastAPI backend runs raw SQL against MySQL on each request, and a Next.js + Recharts frontend renders the result. The dashboard answers four real business questions: who the best customers are (RFM segmentation), whether customers come back (repeat-purchase & cohort retention), what products get bought together (product affinity), and where revenue is leaking (canceled/unavailable order analysis) — each module ending in a data-backed recommendation.',
     keyFeatures: [
@@ -48,6 +49,7 @@ const projectsData: { [key: number]: any } = {
     accuracy: 'N/A',
     tech: ['FastAPI', 'Python', 'SQLite', 'faster-Whisper', 'librosa', 'Sentence-Transformers', 'MediaPipe'],
     github: 'https://github.com/MuhammadAdnan586/interview-platform',
+    images: ['/images/interview-platform-1.jpeg', '/images/interview-platform-2.jpeg', '/images/interview-platform-3.jpeg', '/images/interview-platform-4.jpeg', '/images/interview-platform-5.jpeg'],
     description: 'A multi-tenant SaaS that analyzes a candidate\'s CV, runs a personalized mock interview, and produces an explainable, multi-dimensional readiness report.',
     fullDescription: 'A multi-tenant SaaS platform that parses a candidate\'s CV, runs a personalized mock interview (voice or typed), and produces an explainable, multi-dimensional readiness report rather than a blunt hire/reject verdict. Every "smart" feature — LLM question generation, real voice transcription, semantic scoring, body-language analysis — is optional and auto-detected, so the app is fully functional out of the box and gets smarter as more modules are installed.',
     keyFeatures: [
@@ -75,6 +77,7 @@ const projectsData: { [key: number]: any } = {
     accuracy: 'N/A',
     tech: ['FastAPI', 'Next.js', 'TypeScript', 'Scikit-Learn', 'XGBoost', 'SHAP', 'MySQL', 'Docker'],
     github: 'https://github.com/MuhammadAdnan586/AI-Powered-AutoML',
+    images: ['/images/automl-1.jpeg', '/images/automl-2.jpeg', '/images/automl-3.jpeg', '/images/automl-4.jpeg', '/images/automl-5.jpeg', '/images/automl-6.jpeg', '/images/automl-7.jpeg'],
     description: 'A production-ready AutoML SaaS that takes a raw dataset to a deployed, explainable prediction API — no code required.',
     fullDescription: 'A production-ready, full-stack Automated Machine Learning SaaS that lets a user upload a dataset, automatically train and benchmark multiple ML models, understand why a model predicted what it did via SHAP, and deploy a live prediction API — without writing a single line of code. Built with a FastAPI + MySQL backend and a Next.js + TypeScript frontend, containerized with Docker Compose behind Nginx.',
     keyFeatures: [
@@ -102,6 +105,7 @@ const projectsData: { [key: number]: any } = {
     accuracy: '96.3%',
     tech: ['TensorFlow', 'OpenCV', 'FastAPI', 'Next.js', 'TypeScript', 'MySQL', 'Docker', 'Nginx'],
     github: 'https://github.com/MuhammadAdnan586/Fertilizer_Deficiency_Detection',
+    images: ['/images/fertilizer-detection-1.jpeg', '/images/fertilizer-detection-2.jpeg', '/images/fertilizer-detection-3.jpeg', '/images/fertilizer-detection-4.jpeg', '/images/fertilizer-detection-5.jpeg'],
     description: 'A full-stack computer-vision app that detects nutrient deficiencies from plant leaf images and recommends fertilizers in seconds.',
     fullDescription: 'A full-stack intelligent agriculture system that lets farmers and agronomists upload a plant/soil image or input crop data and instantly detect nutrient deficiencies — Nitrogen, Phosphorus, Potassium, Magnesium, Iron and Calcium — then receive AI-driven fertilizer recommendations. Three architectures were benchmarked for the detection engine: a custom CNN, ResNet-50, and EfficientNet-B3, which won out with 96.3% accuracy. Shipped as a role-based (farmer/agronomist/admin) Next.js + FastAPI web app, containerized with Docker Compose.',
     keyFeatures: [
@@ -327,6 +331,30 @@ export default function ProjectDetail({ params }: { params: { id: string } }) {
               <motion.div className="glass rounded-xl p-6 mb-8" whileHover={{ scale: 1.02 }}>
                 <h3 className="text-xl font-bold mb-4">Dashboard Preview</h3>
                 <img src={project.image} alt={project.title} className="w-full rounded-lg object-cover" />
+              </motion.div>
+            )}
+
+            {/* Project Screenshots Gallery */}
+            {project.images && project.images.length > 0 && (
+              <motion.div className="glass rounded-xl p-6 mb-8" whileHover={{ scale: 1.01 }}>
+                <h3 className="text-xl font-bold mb-4">Project Screenshots</h3>
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+                  {project.images.map((img: string, idx: number) => (
+                    <a
+                      key={idx}
+                      href={img}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block rounded-lg overflow-hidden border border-white/10 hover:border-primary/50 transition-all"
+                    >
+                      <img
+                        src={img}
+                        alt={`${project.title} screenshot ${idx + 1}`}
+                        className="w-full h-40 object-cover hover:scale-105 transition-transform duration-300"
+                      />
+                    </a>
+                  ))}
+                </div>
               </motion.div>
             )}
 
