@@ -101,7 +101,7 @@ export function Hero() {
               transition={{ delay: 0.7, duration: 0.8 }}
             >
               <motion.a
-                href="/Muhammad_Adnan_(CV).pdf"
+                href="/Muhammad Adnan (CV).pdf"
                 download
                 className="flex items-center justify-center gap-2 px-8 py-3 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-lg hover:shadow-lg hover:shadow-blue-500/50 transition-all"
                 whileHover={{ scale: 1.05 }}
